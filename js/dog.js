@@ -7,6 +7,9 @@ const messages = [
   'no me regañes',
   'woof woof',
   'cafecito y a la acción',
+  'ojitos hermosos los tuyos',
+  'te vas por la sombrita',
+  'besito de mariposa para vos'
 ];
 
 const margin = 90;
