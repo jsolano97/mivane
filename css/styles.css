@@ -58,3 +58,18 @@ body {
   90%  { transform: translateX(4px) rotate(0.3deg); }
   100% { transform: translateX(0) rotate(0deg); }
 }
+
+.burger {
+  position: fixed;
+  top: -80px;
+  font-size: 2.5rem;
+  pointer-events: none;
+  animation: fall linear forwards;
+  z-index: 0;
+}
+
+@keyframes fall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
