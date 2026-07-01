@@ -16,34 +16,44 @@ function spawnHeart() {
   setTimeout(() => el.remove(), duration * 1000);
 }
 
-function explodeHearts(onDone) {
-  const count = 45;
-  const duration = 1.3;
-
+function burstAt(x, y, count = 30, duration = 1.2) {
   for (let i = 0; i < count; i++) {
     const el = document.createElement('span');
     el.className = 'heart-burst';
     el.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
 
     const angle = Math.random() * 2 * Math.PI;
-    const distance = 120 + Math.random() * 320;
+    const distance = 80 + Math.random() * 260;
     const dx = Math.cos(angle) * distance;
     const dy = Math.sin(angle) * distance;
-    const size = 1.5 + Math.random() * 2.5;
-    const delay = Math.random() * 0.25;
+    const size = 1.2 + Math.random() * 2.2;
+    const delay = Math.random() * 0.2;
 
+    el.style.left = x + 'px';
+    el.style.top = y + 'px';
     el.style.fontSize = size + 'rem';
     el.style.setProperty('--dx', dx + 'px');
     el.style.setProperty('--dy', dy + 'px');
     el.style.animationDuration = duration + 's';
     el.style.animationDelay = delay + 's';
-    el.style.opacity = '0';
 
     document.body.appendChild(el);
     setTimeout(() => el.remove(), (duration + delay) * 1000 + 100);
   }
+}
 
-  if (onDone) setTimeout(onDone, (duration + 0.25) * 1000);
+function celebrate() {
+  const waves = 12;
+  for (let i = 0; i < waves; i++) {
+    setTimeout(() => {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      burstAt(x, y, 28);
+    }, i * 220);
+  }
+
+  const fastAmbient = setInterval(spawnHeart, 100);
+  setTimeout(() => clearInterval(fastAmbient), waves * 220 + 1500);
 }
 
 setInterval(spawnHeart, 600);

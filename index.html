@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>para vos</title>
+  <title>para vos mi amor</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="container">
-    <p class="message" id="message"></p>
-    <button class="btn" id="next-btn">siguiente</button>
+  <div class="container" id="question-view">
+    <p class="message">¿Quieres ser mi novia?</p>
+    <div class="buttons">
+      <button class="btn btn-yes" id="btn-yes">Sí</button>
+      <button class="btn btn-no" id="btn-no">No</button>
+    </div>
   </div>
-  <script src="js/main.js"></script>
+
+  <div class="container hidden" id="result-view">
+    <p class="message">eso, así me gusta</p>
+  </div>
+
   <script src="js/hearts.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
