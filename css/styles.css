@@ -76,12 +76,6 @@ body {
   border-color: rgba(255, 179, 198, 0.5);
 }
 
-.btn-no.dodging {
-  position: fixed;
-  z-index: 20;
-  transition: top 0.18s ease, left 0.18s ease;
-}
-
 .heart {
   position: fixed;
   bottom: -80px;

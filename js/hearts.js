@@ -42,18 +42,18 @@ function burstAt(x, y, count = 30, duration = 1.2) {
   }
 }
 
+let ambientInterval = setInterval(spawnHeart, 600);
+
 function celebrate() {
-  const waves = 12;
+  const waves = 16;
   for (let i = 0; i < waves; i++) {
     setTimeout(() => {
       const x = Math.random() * window.innerWidth;
       const y = Math.random() * window.innerHeight;
-      burstAt(x, y, 28);
-    }, i * 220);
+      burstAt(x, y, 32);
+    }, i * 200);
   }
 
-  const fastAmbient = setInterval(spawnHeart, 100);
-  setTimeout(() => clearInterval(fastAmbient), waves * 220 + 1500);
+  clearInterval(ambientInterval);
+  ambientInterval = setInterval(spawnHeart, 90);
 }
-
-setInterval(spawnHeart, 600);
