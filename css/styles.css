@@ -111,3 +111,22 @@ body {
   cursor: default;
   pointer-events: none;
 }
+
+.gallery {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery img {
+  max-width: min(45vw, 380px);
+  max-height: 70vh;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow:
+    0 0 40px rgba(255, 200, 130, 0.35),
+    0 0 80px rgba(255, 160, 80, 0.15);
+  animation: fadeIn 1s ease forwards;
+}
