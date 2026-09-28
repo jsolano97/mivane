@@ -76,40 +76,16 @@ body {
   border-color: rgba(255, 179, 198, 0.5);
 }
 
-.heart {
-  position: fixed;
-  bottom: -80px;
-  pointer-events: none;
-  z-index: 0;
-  animation: floatUp linear forwards;
-  opacity: 0.85;
-}
-
-@keyframes floatUp {
-  0%   { transform: translateY(0) translateX(0) scale(1);    opacity: 0.9; }
-  50%  { transform: translateY(-50vh) translateX(var(--sway)) scale(1.1); opacity: 0.7; }
-  100% { transform: translateY(-110vh) translateX(0) scale(0.8); opacity: 0; }
-}
-
-.heart-burst {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  pointer-events: none;
-  z-index: 10;
-  animation: burst ease-out forwards;
-}
-
-@keyframes burst {
-  0%   { transform: translate(-50%, -50%) translate(0, 0) scale(1.2); opacity: 1; }
-  60%  { opacity: 1; }
-  100% { transform: translate(-50%, -50%) translate(var(--dx), var(--dy)) scale(0.3); opacity: 0; }
-}
-
 .btn:disabled {
   opacity: 0.4;
   cursor: default;
   pointer-events: none;
+}
+
+#result-view {
+  max-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .gallery {

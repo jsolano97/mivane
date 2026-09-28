@@ -1,16 +1,16 @@
 const messages = [
-  'Hola mi amor',
-  '¿un mes ya?',
-  'Que rapidooo',
+  'Hola mi guapa, mini break',
+  'Así me gusta que me hagas caso ;)',
+  'Feliz tres meses y un día',
   'Me encantas',
-  'Estoy muy feliz de haberte conocido',
-  'Disfruta tu viaje montones (saludos a Cata, dile que nunca me mandó la foto del regalo y estoy resentido)',
-  'Te amoooo',
-  'Por mas aventuras juntos'
+  'Vení a comerme',
+  'Te mando un besito',
+  'Te amoooo mamacita',
+  'Luego vemos bien lo de Puerto Viejo, pero mientras tanto te dejo un regalito para que lo disfrutes ❤'
 ];
 
 const buttonLabels = [
-  'Presioná aquí',
+  'Click aquí',
   'Seguí',
   'Seguí',
   'Seguí',
@@ -41,6 +41,5 @@ nextBtn.addEventListener('click', () => {
   } else {
     messageView.classList.add('hidden');
     resultView.classList.remove('hidden');
-    celebrate();
   }
 });
